@@ -9,7 +9,9 @@ var config = {
   entry: SRC  + "/index.jsx",
   output: {
     path: OUTPUT,
-    filename: "myCode.js"
+    library:'Tableview',
+    libraryTarget:'umd',
+    filename:'myCode.js'
   },
   module: {
     loaders: [{
