@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <script src='http://d3js.org/d3.v4.js'></script>
+  <!-- <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script> -->
+  <script src='dataset.js'></script>
   <title></title>
 </head>
  
@@ -11,6 +13,13 @@
   <div id="container"></div>
  
   <script src="build/myCode.js"></script>
+  <script type="text/javascript">
+  	var data = {}
+  	data.cols = dataset.samples.reduce((acc,d)=>[...acc,...Object.keys(d)],[]).filter((d,i,self)=>self.indexOf(d)===i)
+  	data.rows = dataset.samples.map((d)=>data.cols.map((c)=>d[c]))
+
+
+  </script>
 </body>
- 
+  
 </html>
