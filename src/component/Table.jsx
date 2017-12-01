@@ -3,7 +3,7 @@ import * as utility from '../utility'
 
 const textStyle = {textAnchor:'middle',dominantBaseline:'middle',fill:'#000000'};
 const fontSize = (text,width) => Math.min(Math.floor(width/text.length)*1.8,16)
-const rowColor = (i)=>{return i%2?"#ffffff":'#e0e2e5'};
+const rowColor = (i)=>i%2?"#ffffff":'#e0e2e5';
 
 
 export class Cell extends React.Component{
